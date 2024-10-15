@@ -1,0 +1,335 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #efefef;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed; /* Sidebar tetap di kiri */
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sidebar h2 {
+    color: #8c76e6;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.sidebar ul li a.active {
+    background-color: #9c88ea;
+    color: #ffffff;
+}
+
+.sidebar ul li a i, .sidebar ul li a .material-icons {
+    margin-right: 10px; /* Jarak antara ikon dan teks */
+    color: #080809; /* Ganti warna ikon jika diperlukan */
+}
+
+.user-info {
+    text-align: center;
+    margin-top: -5%;
+}
+
+.user-info img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    top: 10%;
+}
+
+.main-content {
+    margin-left: 300px; /* Menggeser konten agar tidak tertutup sidebar */
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upgrade-btn {
+    background-color: #8c76e6;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.team-efficiency {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.efficiency-card, .tasks-card, .online-time-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+
+.efficiency-card {
+    background-color: #8c76e6;
+}
+
+.tasks-card {
+    background-color: #edecef;
+}
+
+.online-time-card {
+    background-color: #f3f3f3;
+    color: black;
+    border: 2px dotted #7b7b7b;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 5px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #6c63ff;
+    height: 5px;
+    border-radius: 5px;
+}
+
+.performance-review {
+    display: flex; /* Mengatur elemen agar horizontal */
+    justify-content: space-between; /* Memberikan ruang di antara elemen */
+    align-items: flex-start; /* Menyelaraskan elemen di bagian atas */
+    margin: 20px 0; /* Memberi margin atas dan bawah */
+}
+
+.team-performance {
+    flex: 2; /* Mengambil 2 bagian dari ruang yang tersedia */
+    margin-right: 20px; /* Jarak antar elemen */
+    padding: 10px; /* Memberi ruang di dalam elemen */
+    width: 100%; /* Mengatur lebar elemen ke 100% dari container */
+    height: 300px; /* Mengatur tinggi elemen */
+}
+
+.need-review {
+    flex: 1; /* Mengambil 1 bagian dari ruang yang tersedia */
+    padding: 10px; /* Memberi ruang di dalam elemen */
+    width: 100%; /* Mengatur lebar elemen ke 100% dari container */
+    height: auto; /* Biarkan tinggi otomatis berdasarkan konten */
+}
+
+
+.card {
+    display: flex; /* Mengatur elemen di dalam kartu secara horizontal */
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+    background-color: #f8f8f8;
+    border-radius: 10px;
+    padding: 15px; /* Mengurangi padding dalam kartu */
+    width: auto; /* Mengatur lebar kartu 100% agar memenuhi kontainer */
+    max-width: 300px; /* Maksimal lebar kartu diubah menjadi 500px */
+    margin: 20px auto; /* Jarak atas dan bawah serta tengah secara horizontal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user {
+    display: flex; /* Mengatur elemen user secara horizontal */
+    align-items: center; /* Menyelaraskan konten di tengah secara vertikal */
+    margin-bottom: 0px; /* Mengurangi jarak antar pengguna */
+    padding: 1px; /* Mengurangi padding di dalam user */
+    border-radius: 5px; /* Membuat sudut sedikit melengkung */
+}
+
+.user:last-child {
+    margin-bottom: 0; /* Menghilangkan margin bawah untuk pengguna terakhir */
+}
+
+.avatar {
+    width: 30px; /* Ukuran gambar avatar dikecilkan */
+    height: 30px; /* Ukuran gambar avatar dikecilkan */
+    border-radius: 50%; /* Membuat gambar avatar menjadi lingkaran */
+    margin-right: 10px; /* Mengurangi jarak antara gambar dan informasi */
+}
+
+.info {
+    display: flex;
+    flex-direction: column; /* Menyusun informasi secara vertikal */
+    font-size: 0.8em; /* Mengurangi ukuran font */
+    margin: 0;
+}
+.info h4 {
+    margin: 0; /* Menghilangkan margin dari elemen h4 */
+}
+
+.info p {
+    margin: 1; /* Menghilangkan margin dari elemen p */
+}
+
+.manage-button {
+    margin-top: 10px; /* Mengurangi jarak di atas tombol */
+    padding: 8px; /* Mengurangi padding di sekitar tombol */
+    background-color: #8c76e6; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghilangkan border default */
+    border-radius: 5px; /* Membuat sudut tombol m*/
+}
+
+.departments {
+    margin-top: 50px; /* Jarak atas dari elemen lain */
+    width: auto;
+    align-items: center;
+}
+
+.department-card {
+    display: flex; /* Mengatur elemen menjadi flex container */
+    justify-content: space-between; /* Mengatur jarak antar kartu */
+    align-items: flex-start;
+    margin-top: 50px; /* Jarak atas dari elemen lain */
+    gap: 20px;
+}
+
+.department-card1, .department-card2, .department-card3 {
+    width: 35%; /* Lebar kotak besar */
+    height: 40%; /* Tinggi kotak besar */
+    background-color: #d3cbf3; /* Warna latar belakang kotak besar */
+    position: relative; /* Posisi relatif agar kotak kecil bisa diposisikan di dalamnya */
+    padding: 10px;
+    border-radius: 10px; /* Sudut melengkung */
+}
+
+.department-card1 h4,
+.department-card1 p,
+.department-card2 h4,
+.department-card2 p,
+.department-card3 h4,
+.department-card3 p {
+    margin: 4px 0; /* Mengurangi jarak antara tulisan */
+}
+
+.small-box1, .small-box2, .small-box3 {
+    width: 45px; /* Lebar kotak kecil */
+    height: 45px; /* Tinggi kotak kecil */
+    background-color: #8c76e6; /* Warna latar belakang kotak kecil */
+    position: absolute; /* Posisi absolut di dalam kotak besar */
+    top: 14px; /* Jarak dari atas kotak besar */
+    right: 20px; /* Jarak dari kiri kotak besar */
+    border-radius: 10px;
+    display: flex; /* Mengatur kotak kecil sebagai flex container */
+    justify-content: center; /* Menengahkan isi secara horizontal */
+    align-items: center; /* Menengahkan isi secara vertikal */
+}
+
+.small-box1 i, .small-box2 i, .small-box3 i {
+    font-size: 30px; /* Ukuran ikon */
+    color: white; /* Warna ikon */
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Responsive Design untuk Departments --- */
+@media (max-width: 768px) {
+    .departments {
+        flex-direction: column; /* Mengubah arah menjadi kolom pada perangkat kecil */
+    }
+}
+
+
+
+
+/* --- Responsive Design --- */
+
+/* Tablet (ukuran layar antara 768px dan 1024px) */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 220px;
+    }
+    
+    .team-efficiency {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .efficiency-card, .tasks-card, .online-time-card {
+        width: 100%;
+    }
+}
+
+/* Smartphone (ukuran layar di bawah 768px) */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 10px;
+    }
+
+    .main-content {
+        margin-left: 0;
+        padding: 15px;
+    }
+    
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .upgrade-btn {
+        margin-top: 10px;
+    }
+    
+    .team-efficiency {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .efficiency-card, .tasks-card, .online-time-card {
+        width: 100%;
+    }
+
+    .departments {
+        margin-top: 30px;
+    }
+
+    .team-performance {
+        width: 100%;
+    }
+}
